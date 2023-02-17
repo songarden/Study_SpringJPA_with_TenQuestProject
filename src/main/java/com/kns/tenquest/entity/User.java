@@ -1,20 +1,21 @@
 package com.kns.tenquest.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.UUID;
 
 @Entity
-@Table(name="user_table")
+@Table(name="member_test")
 @Getter
 @Setter
-public class UserEntity {
+@Data
+public class User {
     @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private UUID member_id;
     private String user_id;
     private String user_info;
